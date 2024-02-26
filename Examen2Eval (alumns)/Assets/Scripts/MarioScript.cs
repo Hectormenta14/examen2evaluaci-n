@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class MarioScript : MonoBehaviour
 {
-    private int numsaltos = 1;
+    public int numsaltos = 1;
     private int numsaltosvalue;
     public KeyCode rightKey, leftKey, jumpKey;
     public float speed, rayDistance, jumpForce;
@@ -55,10 +55,7 @@ public class MarioScript : MonoBehaviour
         {
             Instantiate(fireworkPrefab, transform.position, Quaternion.identity);
         }
-        if (_intentionToJump)
-        {
-            numsaltosvalue = numsaltos;
-        }
+
         #region ANIMACIONES
         // ANIMACIONES (PROXIMA DIA ORGANIZARLO EN OTRO SCRIPT)
         if (dir != Vector2.zero)
@@ -107,6 +104,7 @@ public class MarioScript : MonoBehaviour
         RaycastHit2D collision = Physics2D.Raycast(transform.position, Vector2.down, rayDistance, groundMask);
         if (collision)
         {
+            numsaltosvalue = numsaltos;
             return true;
         }
         return false;

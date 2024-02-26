@@ -1884,6 +1884,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f56e47e1c8998bb469ee2426957bd74d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  numsaltos: 2
   rightKey: 100
   leftKey: 97
   jumpKey: 32
@@ -2058,6 +2059,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d6bbcc7b333360489d5156b605c898b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isMoving: 0
+  reducirtiempo: 0.25
+  paratiempo: {fileID: 8300000, guid: d743ce4899a17114b97c63c913fdd8ff, type: 3}
 --- !u!1001 &1589216311257023081
 PrefabInstance:
   m_ObjectHideFlags: 0
