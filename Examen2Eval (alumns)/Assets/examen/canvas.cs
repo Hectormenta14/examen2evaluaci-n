@@ -4,15 +4,11 @@ using UnityEngine;
 
 public class canvas : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        foreach (Tranform child in transform)
+        {
+            UImanager.GetInstance().AddIElement(child.name, child.gameObject);
+        }
     }
 }

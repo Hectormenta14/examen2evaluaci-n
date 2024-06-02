@@ -1,11 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
-public class GameManager : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
-    private TMP_Text tMP;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,7 +13,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        tMP.text = "tiempo:" + time.ToString("00:00");
+        
     }
 }
